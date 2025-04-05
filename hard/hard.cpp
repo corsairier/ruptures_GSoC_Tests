@@ -1,6 +1,4 @@
-#include "../include/cumsum.h"
-#include <iostream>
-using namespace std;
+#include <RcppArmadillo.h>
 
 // [[Rcpp::depends(RcppArmadillo)]]
 
@@ -18,10 +16,6 @@ public:
         
         // Compute cumulative sum of X
         cumsum_X = arma::join_cols(arma::zeros<arma::rowvec>(X.n_cols), arma::cumsum(X, 0));
-        cout << cumsum_X << endl;
-
-        arma::mat cum2 = getCumsum(X);
-        cout << cum2 << endl;
 
         // Compute cumulative sum of squared norms
         cumsum_sq_norms = arma::join_cols(arma::zeros<arma::vec>(1), arma::cumsum(arma::sum(arma::square(X), 1)));

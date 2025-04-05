@@ -35,6 +35,6 @@ bnch3 <- bench::mark(
     iterations = 1000
 )
 
-summary(bnch1)
-summary(bnch2) 
-summary(bnch3)
+summary(bnch1) |> print(n=Inf)
+summary(bnch2) |> print(n=Inf)
+summary(bnch3) |> print(n=Inf)

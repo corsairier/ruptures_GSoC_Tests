@@ -1,4 +1,4 @@
-#include "include/cumsum.h"
+#include "../include/cumsum.h"
 // [[Rcpp::depends(RcppArmadillo)]]
 
 // [[Rcpp::export]]

@@ -15,5 +15,3 @@ cost_ptr2 <- create_cost(Y)
 
 eval_cost(cost_ptr, 0, 3)
 eval_cost(cost_ptr2, 0, 3)
-
-
