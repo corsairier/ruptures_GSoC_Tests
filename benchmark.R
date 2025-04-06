@@ -3,7 +3,7 @@ library(Rcpp)
 library(RcppArmadillo)
 library(ggplot2)
 
-Rcpp::sourceCpp("medium.cpp")
+Rcpp::sourceCpp("medium/medium.cpp")
 Rcpp::sourceCpp("hard/hard.cpp")
 
 set.seed(123)
@@ -35,6 +35,6 @@ bnch3 <- bench::mark(
     iterations = 1000
 )
 
-summary(bnch1) |> print(n=Inf)
-summary(bnch2) |> print(n=Inf)
-summary(bnch3) |> print(n=Inf)
+summary(bnch1)
+summary(bnch2)
+summary(bnch3)
